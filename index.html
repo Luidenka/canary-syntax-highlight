@@ -9,14 +9,14 @@
 <body>
     <div id="code">
         n = int(input('Type a number, and its factorial will be printed: '))
-        
-        if n &lt; 0:
+        <br><br>
+        if n &lt; 0:<br>
             raise ValueError('You must enter a non-negative integer')
-
-        factorial = 1
-        for i in range(2, n + 1):
-            factorial *= i
-
+        <br><br>
+        factorial = 1<br>
+        for i in range(2, n + 1):<br>
+            factorial *= i<br>
+        <br><br>
         print(factorial)
     </div>
     <script>canary.highlight(document.getElementById('code'), "python");</script>
