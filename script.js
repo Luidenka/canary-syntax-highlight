@@ -5,7 +5,7 @@ const canary = {
         text = text.replace(/(#.*)/gm, "<span class=\"highlight-comment\">$1</span>")
         .replace(/([0-9])/gm, "<em>$1</em>")
 
-        var without_comments = text.replace(/<span class="highlight-comment">/gm, "");
+        var without_comments = text.replace(/<span class="highlight-comment">.*/gm, "");
 
         console.log(without_comments);
 
