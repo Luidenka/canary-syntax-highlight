@@ -1,3 +1,7 @@
 #code {
     font-family: "SF Mono",Monaco,Menlo,Courier,monospace;
 }
+
+.highlight_comment {
+    color: rgb(32, 210, 32);
+}
