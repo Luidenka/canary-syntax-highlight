@@ -9,3 +9,7 @@
 .highlight-kw {
     color: rgb(110, 10, 186);
 }
+
+.highlight-number {
+    color: rgb(40, 129, 40)
+}
