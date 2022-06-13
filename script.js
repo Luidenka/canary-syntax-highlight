@@ -7,6 +7,8 @@ const canary = {
 
         var without_comments = text.replace(/#.*/gm, "");
 
+        console.log(without_comments);
+
         text = without_comments.replace(/\b(and|as|assert|break|class|continue|def|del|elif|else|except|False|finally|for|from|global|if|import|in|is|lambda|None|nonlocal|notor|pass|raise|return|True|try|while|with|yield)\b/gm,
         "<span class=\"highlight-kw\">$1</span>");
 
