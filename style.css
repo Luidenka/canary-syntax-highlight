@@ -5,3 +5,7 @@
 .highlight-comment {
     color: rgb(32, 210, 32);
 }
+
+.highlight-kw {
+    color: rgb(110, 10, 186);
+}
