@@ -2,8 +2,8 @@ const canary = {
     highlightAll: (el) => {
         var text = el.innerText;
 
-        text.replace(/(#.*)/gm, "<span class=\"highlight-comment\">$1</span>")
-        text.replace(/([0-9])/gm, "<em>$1</em>")
+        text = text.replace(/(#.*)/gm, "<span class=\"highlight-comment\">$1</span>")
+        .replace(/([0-9])/gm, "<em>$1</em>")
 
         console.log(text);
 
