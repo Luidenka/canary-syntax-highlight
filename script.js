@@ -47,6 +47,7 @@ class Lexer {
             } else if (this.current == '"') {
                 tokens.push(this.#generate_string());
             }
+            else this.#advance();
         }
 
         return tokens;
