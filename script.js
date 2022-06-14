@@ -44,6 +44,8 @@ class Lexer {
                 tokens.push(this.#generate_string());
             }
         }
+
+        return tokens;
     }
 
     #generate_number() {
