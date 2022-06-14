@@ -16,6 +16,7 @@ python_builtins = (
 class Lexer:
     def __init__(self, text) -> None:
         self.text = iter(text)
+        self.__advance()
 
     def __advance(self) -> None:
         try: self.current = next(self.text)
@@ -28,6 +29,7 @@ class Lexer:
             elif self.current in "+-*/%&|^<>=!~": tokens.append({"operator": self.current})
             elif self.current in "qwertyuiopasdfghjklzxcvbnm_": tokens.append(self.__generate_identifier())
             elif self.current == '"': tokens.append(self.__generate_string())
+            else: self.__advance()
 
         return tokens
 
@@ -64,3 +66,17 @@ class Lexer:
             self.__advance()
 
         return {"string": id}
+
+lexer = Lexer("\
+        # Factorial program in Python\n\
+        n = int(input('Type a number, and its factorial will be printed: '))\n\
+        if n &lt; 0:\n\
+            raise ValueError('You must enter a non-negative integer')\n\
+        \n\n\
+        factorial = 1\n\
+        for i in range(2, n + 1):\n\
+            factorial *= i\n\
+        \n\n\
+        print(factorial)")
+
+print(lexer.generate_tokens())

@@ -11,5 +11,9 @@
 }
 
 .highlight-number {
-    color: rgb(40, 129, 40)
+    color: rgb(40, 129, 40);
+}
+
+.html-tag-quote {
+    color: gray;
 }
