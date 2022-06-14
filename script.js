@@ -30,6 +30,7 @@ class Lexer {
 
     #advance() {
         this.current = this.text.length < this.pos ? this.text[this.pos]:null;
+        this.pos += 1;
     }
 
     generate_tokens() {
