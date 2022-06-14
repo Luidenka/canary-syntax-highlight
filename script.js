@@ -29,8 +29,11 @@ class Lexer {
     }
 
     #advance() {
-        this.current = this.text.length < this.pos ? this.text[this.pos]:null;
-        this.pos += 1;
+        if (this.text.length < this.pos) {
+            this.current = this.text[this.pos];
+            this.pos += 1;
+        }
+        else this.current = null;
     }
 
     generate_tokens() {
